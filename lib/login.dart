@@ -14,14 +14,68 @@ class Login extends StatelessWidget {
               colors: [blueMaterialColor.shade50, blueMaterialColor.shade300],
             ),
           ),
-          child: Center(
-            child: Text(
-              "Test gradient!",
-              style: TextStyle(
-                  fontSize: 48.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            ),
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                flex: 45,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(20.0, 70.0, 40.0, 40.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Icon(
+                        Icons.account_circle,
+                        color: Colors.cyan,
+                        size: 80.0,
+                      ),
+                      Spacer(),
+                      Text("Start managing your",
+                          style: largeTextStyle
+                              .merge(TextStyle(color: lightTextGray))),
+                      Text("money with us!",
+                          style: largeTextStyle
+                              .merge(TextStyle(fontWeight: FontWeight.bold))),
+                      Spacer(),
+                      Row(
+                        children: <Widget>[
+                          FlatButton(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0)),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 15.0, horizontal: 20.0),
+                            color: blueMaterialColor.shade50,
+                            onPressed: () {
+                              print("Log in button pressed.");
+                            },
+                            child: Row(
+                              children: <Widget>[
+                                Text("Already signed up? ",
+                                    style: smallTextStyle.merge(
+                                        TextStyle(color: lightTextGray))),
+                                Text(
+                                  "Log in",
+                                  style: smallTextStyle.merge(
+                                      TextStyle(fontWeight: FontWeight.bold)),
+                                )
+                              ],
+                            ),
+                          ),
+                          Spacer()
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 55,
+                child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(70.0)))),
+              )
+            ],
           ),
         ),
       ),

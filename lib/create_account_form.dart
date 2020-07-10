@@ -15,24 +15,14 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
       key: _formKey,
       child: Column(
         children: <Widget>[
-          TextFormField(
-              decoration: InputDecoration(
-                  labelText: "Email", labelStyle: inputLabelStyleUnselected),
-              style: inputTextStyle),
+          CustomTextFormField(labelText: "Email"),
           Spacer(),
-          TextFormField(
-              decoration: InputDecoration(
-                  labelText: "Full name",
-                  labelStyle: inputLabelStyleUnselected),
-              style: inputTextStyle),
+          CustomTextFormField(labelText: "Full name"),
           Spacer(),
-          TextFormField(
-              decoration: InputDecoration(
-                  labelText: "Password", labelStyle: inputLabelStyleUnselected),
-              style: inputTextStyle),
+          CustomTextFormField(labelText: "Password"),
           Spacer(),
           RaisedButton(
-            onPressed: () {},
+            onPressed: () {print("Get started button pressed");},
             padding: EdgeInsets.all(20.0),
             color: blueMaterialColor.shade100,
             shape: defaultRectangularButtonShape,
@@ -57,5 +47,19 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
         ],
       ),
     );
+  }
+}
+
+class CustomTextFormField extends StatelessWidget {
+  CustomTextFormField({@required this.labelText});
+
+  final String labelText;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+        decoration: InputDecoration(
+            labelText: this.labelText, labelStyle: inputLabelStyleUnselected),
+        style: inputTextStyle);
   }
 }

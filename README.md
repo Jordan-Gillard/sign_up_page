@@ -1,16 +1,5 @@
-# sign_up_page
-
-A simple sign up page built using Flutter.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Flutter Sign Up Page
+This Flutter application is my solution to the [Daily UI](https://www.dailyui.co/) #1 challenge.
+For this exercise I was inspired by [Vishnu Prasad](https://dribbble.com/vlockn)'s
+[Fintech Mobile Components](https://dribbble.com/shots/11233146-Fintech-Mobile-Components) sign 
+up page. So I decided to create it in Flutter. 

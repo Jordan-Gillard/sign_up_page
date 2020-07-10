@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sign_up_page/constants.dart';
+import 'package:sign_up_page/create_account_form.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -25,7 +26,7 @@ class Login extends StatelessWidget {
                     children: <Widget>[
                       Icon(
                         Icons.account_circle,
-                        color: Colors.cyan,
+                        color: iconTurquoise,
                         size: 80.0,
                       ),
                       Spacer(),
@@ -38,9 +39,8 @@ class Login extends StatelessWidget {
                       Spacer(),
                       Row(
                         children: <Widget>[
-                          FlatButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10.0)),
+                          RaisedButton(
+                            shape: defaultRectangularButtonShape,
                             padding: EdgeInsets.symmetric(
                                 vertical: 15.0, horizontal: 20.0),
                             color: blueMaterialColor.shade50,
@@ -70,10 +70,15 @@ class Login extends StatelessWidget {
               Expanded(
                 flex: 55,
                 child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(70.0)))),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius:
+                          BorderRadius.only(topRight: Radius.circular(70.0))),
+                  child: Padding(
+                    padding: const EdgeInsets.all(30.0),
+                    child: CreateAccountForm(),
+                  )
+                ),
               )
             ],
           ),

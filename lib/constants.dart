@@ -19,3 +19,6 @@ MaterialColor blueMaterialColor = MaterialColor(
 TextStyle largeTextStyle = TextStyle(fontSize: 30.0, color: Colors.white);
 TextStyle smallTextStyle = TextStyle(fontSize: 20.0, color: Colors.white);
 Color lightTextGray = Colors.white70;
+Color iconTurquoise = Color(0xFF32D3ED);
+RoundedRectangleBorder defaultRectangularButtonShape =
+    RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0));

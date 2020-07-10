@@ -17,15 +17,15 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
         children: <Widget>[
           TextFormField(
               decoration: InputDecoration(labelText: "Email"),
-              style: TextStyle(fontSize: 16.0)),
+              style: inputTextStyle),
           Spacer(),
           TextFormField(
               decoration: InputDecoration(labelText: "Full name"),
-              style: TextStyle(fontSize: 16.0)),
+              style: inputTextStyle),
           Spacer(),
           TextFormField(
               decoration: InputDecoration(labelText: "Password"),
-              style: TextStyle(fontSize: 16.0)),
+              style: inputTextStyle),
           Spacer(),
           RaisedButton(
             onPressed: () {},

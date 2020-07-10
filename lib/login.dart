@@ -20,7 +20,8 @@ class Login extends StatelessWidget {
               flex: 45,
               child: SingleChildScrollView(
                 child: ConstrainedBox(
-                  constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 0.45),
+                  constraints: BoxConstraints(
+                      maxHeight: MediaQuery.of(context).size.height * 0.45),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(20.0, 70.0, 40.0, 40.0),
                     child: Column(
@@ -32,14 +33,14 @@ class Login extends StatelessWidget {
                           color: iconTurquoise,
                           size: 80.0,
                         ),
-                      Spacer(),
+                        Spacer(),
                         Text("Start managing your",
-                            style: largeTextStyle
-                                .merge(TextStyle(color: lightTextGray))),
+                            style:
+                                largeTextStyle.copyWith(color: lightTextGray)),
                         Text("money with us!",
-                            style: largeTextStyle
-                                .merge(TextStyle(fontWeight: FontWeight.bold))),
-                      Spacer(),
+                            style: largeTextStyle.copyWith(
+                                fontWeight: FontWeight.bold)),
+                        Spacer(),
                         Row(
                           children: <Widget>[
                             RaisedButton(
@@ -53,17 +54,17 @@ class Login extends StatelessWidget {
                               child: Row(
                                 children: <Widget>[
                                   Text("Already signed up? ",
-                                      style: smallTextStyle.merge(
-                                          TextStyle(color: lightTextGray))),
+                                      style: smallTextStyle.copyWith(
+                                          color: lightTextGray)),
                                   Text(
                                     "Log in",
-                                    style: smallTextStyle.merge(
-                                        TextStyle(fontWeight: FontWeight.bold)),
+                                    style: smallTextStyle.copyWith(
+                                        fontWeight: FontWeight.bold),
                                   )
                                 ],
                               ),
                             ),
-                          Spacer()
+                            Spacer()
                           ],
                         )
                       ],
@@ -76,17 +77,17 @@ class Login extends StatelessWidget {
               flex: 55,
               child: SingleChildScrollView(
                 child: ConstrainedBox(
-                  constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 0.55),
+                  constraints: BoxConstraints(
+                      maxHeight: MediaQuery.of(context).size.height * 0.55),
                   child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius:
-                            BorderRadius.only(topRight: Radius.circular(70.0))),
-                    child: Padding(
-                      padding: const EdgeInsets.all(30.0),
-                      child: CreateAccountForm(),
-                    )
-                  ),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(70.0))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(30.0),
+                        child: CreateAccountForm(),
+                      )),
                 ),
               ),
             )

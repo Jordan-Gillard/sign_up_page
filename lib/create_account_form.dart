@@ -16,15 +16,19 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
       child: Column(
         children: <Widget>[
           TextFormField(
-              decoration: InputDecoration(labelText: "Email"),
+              decoration: InputDecoration(
+                  labelText: "Email", labelStyle: inputLabelStyleUnselected),
               style: inputTextStyle),
           Spacer(),
           TextFormField(
-              decoration: InputDecoration(labelText: "Full name"),
+              decoration: InputDecoration(
+                  labelText: "Full name",
+                  labelStyle: inputLabelStyleUnselected),
               style: inputTextStyle),
           Spacer(),
           TextFormField(
-              decoration: InputDecoration(labelText: "Password"),
+              decoration: InputDecoration(
+                  labelText: "Password", labelStyle: inputLabelStyleUnselected),
               style: inputTextStyle),
           Spacer(),
           RaisedButton(
@@ -42,7 +46,10 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
                     color: Colors.white,
                   ),
                 ),
-                Icon(Icons.arrow_forward, color: Colors.white,),
+                Icon(
+                  Icons.arrow_forward,
+                  color: Colors.white,
+                ),
               ],
             ),
           ),

@@ -23,3 +23,6 @@ Color iconTurquoise = Color(0xFF32D3ED);
 RoundedRectangleBorder defaultRectangularButtonShape =
     RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0));
 TextStyle inputTextStyle = TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold);
+TextStyle inputLabelStyleUnselected = TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400);
+TextStyle inputLabelStyleSelected = TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400, color: blueMaterialColor.shade50);
+

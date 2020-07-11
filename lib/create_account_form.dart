@@ -21,7 +21,10 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
             keyboardType: TextInputType.emailAddress,
           ),
           Spacer(),
-          CustomTextFormField(labelText: "Full name"),
+          CustomTextFormField(
+            labelText: "Full name",
+            textCapitalization: TextCapitalization.words,
+          ),
           Spacer(),
           CustomTextFormField(
             labelText: "Password",
@@ -64,11 +67,13 @@ class CustomTextFormField extends StatefulWidget {
     @required this.labelText,
     this.isPassword = false,
     this.keyboardType = TextInputType.text,
+    this.textCapitalization = TextCapitalization.none,
   });
 
   final String labelText;
   final bool isPassword;
   final TextInputType keyboardType;
+  final TextCapitalization textCapitalization;
 
   @override
   _CustomTextFormFieldState createState() => _CustomTextFormFieldState();
@@ -79,10 +84,13 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-          labelText: widget.labelText, labelStyle: inputLabelStyleUnselected),
+        labelText: widget.labelText,
+        labelStyle: inputLabelStyleUnselected,
+      ),
       style: inputTextStyle,
       obscureText: widget.isPassword,
       keyboardType: widget.keyboardType,
+      textCapitalization: widget.textCapitalization,
     );
   }
 }
